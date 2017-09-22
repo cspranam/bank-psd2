@@ -1,14 +1,16 @@
 const mongoose = require('mongoose');
 var OidcMap = mongoose.model('OidcMapping',{
-	accessToken: {
+	access_token: {
 		type: String
 	},
-	clientId: {
+	auth_code: {
 		type: String
 	},
-	intentId: {
-		type: String,
-		unique: true
+	client_id: {
+		type: String
+	},
+	intent_id: {
+		type: String
 	}
 });
 module.exports = {OidcMap};
